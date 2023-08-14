@@ -1,6 +1,7 @@
 body{
     font-family: sans-serif, helvetica;
-
+    min-height: 100vh;
+    margin: 0;
 }
 
 /*Header*/
@@ -29,6 +30,7 @@ a{
 
 .container{
     display: flex;
+    flex-direction: column;
 }
 
 /*Left side of Content*/
@@ -36,31 +38,37 @@ a{
 .left{
     background-color: #6C6F7F;
     color: white;
-    flex: 1 1 400px;
+    flex: 1 1 250px;
     padding: 10px 50px;
    
 }
 
+.pictures{
+    display: flex;
+    justify-content: space-around;
+}
+
 img,
-.credit{
+.source{
     border: 2px #455561  solid;
     background-color: #5C6672;
     border-radius: 10px;
 }
 
 img{
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     padding: 10px;
     margin:30px;
 }
 
-.credit{
-    padding: 10px;
-    margin: 20px;
+.source{
+    padding: 5px;
+    margin: 10px;
     display: flex;  
     flex-direction: column;
     align-items: center;
+    
 }
 
 /*Right Side of Content*/
@@ -73,6 +81,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1, 1, 500px;
     
 }
 
@@ -103,6 +112,37 @@ footer{
     font-weight: bold;
     display: flex;
     justify-content: center;
+    
 }
 
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 400px;
+  }
 
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: black;}
